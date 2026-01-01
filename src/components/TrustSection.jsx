@@ -3,21 +3,25 @@ export default function TrustSection() {
         {
             name: "YBM어학원",
             url: "https://www.ybmedu.com",
+            logo: "https://www.ybmedu.com/resource/images/common/logo-edu.svg",
             description: "국내 대표 어학원"
         },
         {
             name: "에듀윌",
             url: "https://www.eduwill.net",
+            logo: "https://img.eduwill.net/Img2/Common/BI/type2/live/logo.svg",
             description: "종합 교육 기업"
         },
         {
             name: "해커스",
             url: "https://www.hackers.com",
+            logo: "https://www.hackers.com/images/main/renew/logo.png",
             description: "어학·자격증 전문"
         },
         {
             name: "시원스쿨",
             url: "https://www.siwonschool.com",
+            logo: "https://siwon-cdn.siwonschool.com/www/comm/logo_20year.svg",
             description: "온라인 어학 교육"
         }
     ];
@@ -43,12 +47,21 @@ export default function TrustSection() {
                             href={partner.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-white rounded-xl p-6 border border-slate-200 hover-lift text-center group"
+                            className="bg-white rounded-xl p-6 border border-slate-200 hover-lift flex flex-col items-center justify-center group min-h-[120px]"
                         >
-                            <div className="text-xl font-bold text-navy group-hover:text-accent transition-colors mb-1">
+                            <img 
+                                src={partner.logo} 
+                                alt={partner.name}
+                                className="h-10 max-w-[140px] object-contain mb-2 grayscale group-hover:grayscale-0 transition-all"
+                                onError={(e) => {
+                                    e.target.style.display = 'none';
+                                    e.target.nextSibling.style.display = 'block';
+                                }}
+                            />
+                            <div className="text-lg font-bold text-navy group-hover:text-accent transition-colors hidden">
                                 {partner.name}
                             </div>
-                            <div className="text-xs text-slate-400">
+                            <div className="text-xs text-slate-400 mt-1">
                                 {partner.description}
                             </div>
                         </a>
@@ -80,4 +93,3 @@ export default function TrustSection() {
         </section>
     );
 }
-
