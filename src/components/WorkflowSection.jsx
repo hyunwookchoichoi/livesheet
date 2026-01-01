@@ -18,11 +18,11 @@ export default function WorkflowSection() {
         {
             number: "02",
             title: "링크 전송",
-            description: "생성된 링크를 카카오톡이나 문자로 학생들에게 전송하세요. 클릭 한 번이면 끝입니다.",
+            description: "생성된 URL을 카카오톡이나 문자로 학생들에게 전달하면 끝입니다.",
             details: [
                 "URL 복사 후 카톡에 붙여넣기",
                 "학생별/반별 그룹 전송 지원",
-                "별도 앱 설치 없이 바로 열람"
+                "학생은 쏠브 앱에서 바로 열람"
             ],
             icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -44,6 +44,21 @@ export default function WorkflowSection() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
             )
+        },
+        {
+            number: "04",
+            title: "숙제 회수 & 검사",
+            description: "필요하시면 학생들에게 나눠준 교재에 대해 숙제를 회수하고 검사할 수 있어요.",
+            details: [
+                "학생별 풀이 내역 자동 수집",
+                "각 학생별 대시보드 제공",
+                "오답노트 자동 생성 기능"
+            ],
+            icon: (
+                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+            )
         }
     ];
 
@@ -56,36 +71,36 @@ export default function WorkflowSection() {
                         이렇게 간단합니다
                     </h2>
                     <p className="text-lg text-slate-600">
-                        복잡한 설정 없이, 3단계면 학습자료 배포 끝
+                        복잡한 설정 없이, 4단계면 학습자료 배포부터 검사까지
                     </p>
                 </div>
 
                 {/* Steps */}
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {steps.map((step, index) => (
                         <div 
                             key={index} 
-                            className="bg-white rounded-2xl p-8 border border-slate-200 hover-lift"
+                            className="bg-white rounded-2xl p-6 border border-slate-200 hover-lift"
                         >
                             {/* Step Number & Icon */}
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="w-14 h-14 bg-navy rounded-xl flex items-center justify-center text-white">
+                            <div className="flex items-center gap-3 mb-4">
+                                <div className="w-12 h-12 bg-navy rounded-xl flex items-center justify-center text-white">
                                     {step.icon}
                                 </div>
-                                <span className="text-4xl font-bold text-slate-200">{step.number}</span>
+                                <span className="text-3xl font-bold text-slate-200">{step.number}</span>
                             </div>
 
                             {/* Title */}
-                            <h3 className="text-xl font-bold text-navy mb-3">{step.title}</h3>
+                            <h3 className="text-lg font-bold text-navy mb-2">{step.title}</h3>
 
                             {/* Description */}
-                            <p className="text-slate-600 mb-4 leading-relaxed">{step.description}</p>
+                            <p className="text-sm text-slate-600 mb-4 leading-relaxed">{step.description}</p>
 
                             {/* Details */}
-                            <ul className="space-y-2">
+                            <ul className="space-y-1.5">
                                 {step.details.map((detail, idx) => (
-                                    <li key={idx} className="flex items-start gap-2 text-sm text-slate-500">
-                                        <svg className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <li key={idx} className="flex items-start gap-2 text-xs text-slate-500">
+                                        <svg className="w-3.5 h-3.5 text-accent mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                         </svg>
                                         <span>{detail}</span>
@@ -95,29 +110,7 @@ export default function WorkflowSection() {
                         </div>
                     ))}
                 </div>
-
-                {/* Visual Flow */}
-                <div className="mt-12 hidden md:flex items-center justify-center gap-4 text-slate-400">
-                    <span className="font-medium">파일 선택</span>
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    <span className="font-medium">업로드</span>
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    <span className="font-medium">링크 생성</span>
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    <span className="font-medium">카톡 전송</span>
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                    </svg>
-                    <span className="font-medium text-accent">학생 열람!</span>
-                </div>
             </div>
         </section>
     );
 }
-
