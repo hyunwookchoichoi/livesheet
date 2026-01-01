@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+/* 
+  Color System (Simplified)
+  - White: #FFFFFF (background)
+  - Navy: #0F172A (primary text, dark sections)
+  - Orange: #F97316 (accent, limited use)
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFFFF;
+  color: #0F172A;
+  line-height: 1.6;
+}
+
+/* Accent color utility */
+.text-accent {
+  color: #F97316;
+}
+
+.bg-accent {
+  background-color: #F97316;
+}
+
+.border-accent {
+  border-color: #F97316;
+}
+
+/* Navy color utility */
+.text-navy {
+  color: #0F172A;
+}
+
+.bg-navy {
+  background-color: #0F172A;
+}
+
+/* Simple hover animation */
+.hover-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
