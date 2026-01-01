@@ -6,9 +6,28 @@ export default function CTASection() {
                 <h2 className="text-3xl sm:text-4xl font-bold text-navy mb-4">
                     지금 바로 시작하세요
                 </h2>
+                
+                {/* Pricing Info */}
+                <div className="bg-slate-50 rounded-2xl p-6 mb-8 max-w-xl mx-auto">
+                    <div className="text-3xl font-bold text-navy mb-2">
+                        월 <span className="text-accent">7,000</span>원 / 인
+                    </div>
+                    <p className="text-slate-600 text-sm mb-4">
+                        최소 인원 제한 없음
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm">
+                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full font-medium">
+                            1개월 무료 이용
+                        </span>
+                        <span className="bg-navy/10 text-navy px-3 py-1 rounded-full font-medium">
+                            공부선배 가입 시 +1개월 추가 무료
+                        </span>
+                    </div>
+                </div>
+
                 <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
                     복잡한 계약 없이 바로 사용해보세요.<br />
-                    <span className="text-accent font-semibold">공부선배를 통해 가입하시면</span> 특별 혜택을 드립니다.
+                    <span className="text-accent font-semibold">공부선배를 통해 가입하시면</span> 총 2개월 무료!
                 </p>
 
                 {/* CTA Buttons */}

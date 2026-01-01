@@ -3,7 +3,7 @@ export default function SolveSection() {
         <section className="py-20 bg-white">
             <div className="max-w-6xl mx-auto px-4">
                 {/* Section Header */}
-                <div className="text-center mb-16">
+                <div className="text-center mb-12">
                     <div className="inline-flex items-center gap-2 mb-4">
                         <img 
                             src="https://testbank.ai/solve-logo.svg" 
@@ -21,7 +21,7 @@ export default function SolveSection() {
                 </div>
 
                 {/* Hero Image */}
-                <div className="mb-16 text-center">
+                <div className="mb-12 text-center">
                     <img 
                         src="https://testbank.ai/images/solve/jVPrzJtLR4Azfi6fmhtDBy43AdQ.png"
                         alt="쏠브 앱 화면"
@@ -29,131 +29,45 @@ export default function SolveSection() {
                     />
                 </div>
 
-                {/* Features Grid */}
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
-                    {/* 자동 채점 */}
-                    <div className="bg-slate-50 rounded-2xl p-6 lg:p-8">
-                        <div className="mb-4">
-                            <span className="inline-block bg-accent text-white px-3 py-1 rounded-full text-xs font-semibold">
-                                핵심 기능
-                            </span>
+                {/* Features - 워딩 위주 */}
+                <div className="grid md:grid-cols-3 gap-6 mb-12">
+                    <div className="bg-slate-50 rounded-xl p-6 text-center">
+                        <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
                         </div>
-                        <h3 className="text-2xl font-bold text-navy mb-3">
-                            버튼 한 번이면 자동채점
-                        </h3>
-                        <p className="text-slate-600 mb-4 leading-relaxed">
-                            문제를 풀고 채점 버튼만 누르면 끝! 정답과 오답이 바로 표시되고,
-                            해설도 한 페이지에서 바로 확인할 수 있어요.
+                        <h3 className="text-lg font-bold text-navy mb-2">버튼 한 번이면 자동채점</h3>
+                        <p className="text-sm text-slate-600">
+                            정답/오답 즉시 표시, 해설 즉시 확인, 오답노트 자동 추가
                         </p>
-                        <ul className="space-y-2 text-sm text-slate-600">
-                            <li className="flex items-center gap-2">
-                                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                                정답/오답 즉시 표시
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                                해설 즉시 확인
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                                오답노트 자동 추가
-                            </li>
-                        </ul>
-                        <img 
-                            src="https://testbank.ai/_next/image?url=%2Fsolve-auto-grading.jpg&w=1920&q=75"
-                            alt="자동 채점 화면"
-                            className="mt-6 rounded-xl shadow-lg w-full"
-                        />
                     </div>
-
-                    {/* 필기 & 정답 체크 */}
-                    <div className="bg-slate-50 rounded-2xl p-6 lg:p-8">
-                        <div className="mb-4">
-                            <span className="inline-block bg-navy text-white px-3 py-1 rounded-full text-xs font-semibold">
-                                학습 경험
-                            </span>
+                    <div className="bg-slate-50 rounded-xl p-6 text-center">
+                        <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                            </svg>
                         </div>
-                        <h3 className="text-2xl font-bold text-navy mb-3">
-                            펜슬로 필기, 손으로 정답 체크
-                        </h3>
-                        <p className="text-slate-600 mb-4 leading-relaxed">
-                            종이에 쓰는 것처럼 자연스러운 필기 경험. 펜슬 모드 전환 없이 
-                            손가락으로 바로 정답을 체크할 수 있어요.
+                        <h3 className="text-lg font-bold text-navy mb-2">끝내주는 필기감</h3>
+                        <p className="text-sm text-slate-600">
+                            종이에 쓰는 것처럼 자연스러운 필기, 펜슬 전환 없이 손으로 바로 정답 체크
                         </p>
-                        <ul className="space-y-2 text-sm text-slate-600">
-                            <li className="flex items-center gap-2">
-                                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                                끝내주는 필기감
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                                문항별 개별 풀이
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                                </svg>
-                                한 페이지 통으로 보기
-                            </li>
-                        </ul>
-                        <div className="mt-6 grid grid-cols-2 gap-4">
-                            <img 
-                                src="https://testbank.ai/_next/image?url=%2Fsolve-answer-writing.png&w=640&q=75"
-                                alt="펜슬 필기"
-                                className="rounded-xl shadow-lg w-full"
-                            />
-                            <img 
-                                src="https://testbank.ai/_next/image?url=%2Fsolve-answer-check.png&w=640&q=75"
-                                alt="손으로 정답 체크"
-                                className="rounded-xl shadow-lg w-full"
-                            />
-                        </div>
                     </div>
-                </div>
-
-                {/* 선생님에게 전달 */}
-                <div className="bg-navy rounded-2xl p-8 lg:p-12 text-center">
-                    <h3 className="text-2xl font-bold text-white mb-4">
-                        학생 풀이 내역이 선생님에게 자동 전달
-                    </h3>
-                    <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-                        학생들이 푼 문제, 정답률, 오답 패턴까지 자동으로 집계되어 선생님 대시보드로 전달됩니다.
-                        일일이 채점할 필요 없이 학습 현황을 한눈에 파악하세요.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-6 text-sm">
-                        <div className="flex items-center gap-2 text-white">
-                            <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    <div className="bg-slate-50 rounded-xl p-6 text-center">
+                        <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg className="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                             </svg>
-                            <span>풀이 내역 자동 수집</span>
                         </div>
-                        <div className="flex items-center gap-2 text-white">
-                            <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <span>학생별 대시보드</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-white">
-                            <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                            <span>오답노트 자동 생성</span>
-                        </div>
+                        <h3 className="text-lg font-bold text-navy mb-2">문항별 개별 풀이</h3>
+                        <p className="text-sm text-slate-600">
+                            한 페이지 통으로 보기, 문제집과 동일한 학습 경험 제공
+                        </p>
                     </div>
                 </div>
 
                 {/* App Download Hint */}
-                <div className="mt-12 text-center">
+                <div className="text-center">
                     <p className="text-slate-500 text-sm mb-4">
                         쏠브는 App Store와 Google Play에서 무료로 다운로드할 수 있습니다.
                     </p>

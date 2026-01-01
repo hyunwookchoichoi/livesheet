@@ -23,7 +23,7 @@ export default function ComparisonSection() {
         {
             category: "자료 관리",
             old: "분실, 훼손, 재인쇄 반복",
-            new: "클라우드에 영구 보관, 언제든 재배포"
+            new: "클라우드 보관(영구삭제 가능), 배포 및 회수 자유로움"
         }
     ];
 
